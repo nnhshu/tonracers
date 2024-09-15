@@ -35,6 +35,11 @@ a {
   text-decoration: none;
 }
 
+.game-wrap {
+  width: 100vw;
+  height: 100vh;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
