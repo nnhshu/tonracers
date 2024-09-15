@@ -35,9 +35,11 @@ const WebApp = ({ onScriptLoad }) => {
     const getDataUser = async (user) => {
 
         const loginPayload = {
-            telegramId: 860748460,
-            first_name: 'Harry Nguyen',
-            last_name: '|',
+            telegramId: user.id,
+            auth_date: user.auth_date,
+            first_name: user.first_name,
+            last_name: user.last_name,
+            start_param: user.start_param,
             photo_url: "",
             platform: 'WEBAPP_TELEGRAM'
         };
