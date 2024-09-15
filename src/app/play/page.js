@@ -16,9 +16,10 @@ import {
 const WebApp = ({ onScriptLoad }) => {
 
     const { user, webApp } = useTelegram();
-
-    const telegramWebApp = window.localStorage.getItem("telegramWebApp") && window.localStorage.getItem("telegramWebApp").replace(/"/g, '');
-
+    let telegramWebApp;
+    if (typeof window !== 'undefined') {
+        telegramWebApp = window.localStorage.getItem("telegramWebApp") && window.localStorage.getItem("telegramWebApp").replace(/"/g, '');
+    }
 
     const [jsonString, setJsonString] = useState(null);
 
